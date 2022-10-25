@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgba(0, 0, 0, 0.966);
+}
+
+main {
+    background: white;
+}
+
+#flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 5.5rem;
+    background-color: black;
+}
+
+@media (max-width: 400px) {
+    #flex-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1100px) {
+    .flex-item-3 {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .flex-item-2 {
+        display: none;
+    }
+
+    .flex-item-3 {
+        display: block;
+    }
+}
+
+#flex-container>* {
+    color: white;
+    margin: 0 5%;
+}
+
+#flex-container>* ul {
+    display: flex;
+    list-style: none;
+}
+
+#flex-container>* ul li {
+    padding: 0.3rem;
+}
+
+@media (max-width: 450px) {
+    #flex-container>* ul li {
+        padding: 0.1rem;
+    }
+}
+
+.flex-item-2 ul li {
+    border-radius: 5px;
+}
+
+.flex-item-2 ul li a {
+    padding: 1.25rem;
+}
+
+.flex-item-3 #button-top-1,
+.flex-item-3 #button-top-2 {
+    background: black;
+    color: white;
+    border: none;
+}
+
+header a,
+header p {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.submit-button {
+    background: rgb(27, 27, 27);
+    margin-right: 1rem;
+    border: 1px solid white;
+}
+
+.sign-button {
+    background: #4C5FD5;
+}
+
+.help {
+    width: 100%;
+    min-height: 350px;
+    background:
+        #dadbf1;
+    overflow: hidden;
+}
+
+.area {
+    min-height: 400px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+footer {
+    width: 100%;
+    min-height: 350px;
+    background: black;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40rem;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 70%;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 4rem;
+    }
+}
+
+.grid>* {
+    background: white;
+    display: flex;
+}
+
+.grid *>article p {
+    margin: 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+article h2 {
+    margin: 40px 20px 20px;
+    font-size: 1.5rem;
+}
+
+article a {
+    text-decoration: none;
+    color: #4C5FD5;
+}
+
+#menu {
+    width: 100%;
+    min-height: 225px;
+    background: rgb(22, 22, 22);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+    position: absolute;
+}
+
+@media (min-width: 1100px) {
+    #menu {
+        display: none !important;
+    }
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.help section {
+    text-align: center;
+}
+
+.help section h1 {
+    font-size: clamp(2.25rem, 5vw, 5rem);
+    margin: 5rem auto 3rem;
+    font-weight: 400;
+}
+
+.search-field input {
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 4rem;
+    width: clamp(19rem, 70vw, 45rem);
+    padding-left: 1rem;
+}
+
+.search-field input::placeholder {
+    font-size: 1.25rem;
+}
+
+.photos {
+    height: clamp(60px, 5vw, 100px);
+    float: left;
+    margin: 3rem 0 auto;
+}
+
+.footer-grid {
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+.footer-grid *>article h2,
+.footer-grid *>article h3 {
+    color: white;
+    padding: 0;
+}
+
+.footer-grid *>article a {
+    color: white;
+}
+
+.footer-grid *>li {
+    padding: 1px 20px;
+}
+
+article h3 {
+    margin: 20px 20px 0px;
+    font-size: 1.5rem;
+}
+
+.footer-grid *>article p {
+    color: white;
+    padding: 0;
+    margin: 5px 20px;
+}
+
+.footer-grid-fifth article {
+    margin: 225px auto;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .footer-grid-fifth article {
+        margin: 2rem auto;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
